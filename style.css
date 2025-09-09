@@ -42,6 +42,16 @@ main p{
     position: sticky;
     top: 0;
     align-self: flex-start;
+    transition: 300ms ease-in-out;
+    text-wrap: nowrap;
+}
+#sidebar.close{
+    padding: 5px;
+    width: 60px;
+    overflow: hidden;
+     > ul > li:first-child span{
+        padding-right: 1.5rem;
+    }
 }
 #sidebar ul{
     list-style: none;
@@ -110,6 +120,7 @@ main p{
     border: none;
     background: none;
     border-radius: 0.5rem;
+    padding: 0.4em;
     margin-left: auto;
     cursor: pointer;
 }
@@ -118,4 +129,10 @@ main p{
     border-radius: 1em;
     margin-bottom: 20px;
     padding: min(3em, 15%);
+}
+svg{
+    transition: 150ms ease;
+}
+.toggle-button:hover{
+    background-color: var(--hover-color);
 }
