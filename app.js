@@ -19,4 +19,14 @@ let sidebar = document.querySelector('#sidebar');
 sidebarButton.addEventListener('click', () => {
     sidebar.classList.toggle('close');
     sidebarButton.classList.toggle('rotate');
+    let submenus = document.querySelectorAll('.sub-menu');
+    submenus.forEach((submenu) => {
+        if(submenu.classList.contains('show') && sidebar.classList.contains('close')){
+            submenu.classList.toggle('show');
+            let dropbtn = submenu.parentElement.querySelector('.dropdown-button');
+            dropbtn.classList.toggle('rotate');
+        }
+            
+    });
+
 });
